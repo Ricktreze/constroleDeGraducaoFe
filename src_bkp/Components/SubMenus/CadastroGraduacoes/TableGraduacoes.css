@@ -1,0 +1,22 @@
+thead {
+  position: sticky !important;
+  top: 0 !important; 
+  background-color: #f2f2f2 !important; 
+  z-index: 1 !important; 
+  
+ }
+
+td {
+  width: 100%;
+}
+
+
+td:hover {
+  cursor: pointer;
+}
+
+th{
+  background-color: #ff0000 !important;
+  color: white !important;
+}
+

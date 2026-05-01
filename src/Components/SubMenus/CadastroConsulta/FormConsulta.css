@@ -1,0 +1,20 @@
+.consultaData{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 5%;
+}
+
+.consultarPresenca{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.consultarBotao{
+  
+  background-color: red !important;
+}
+

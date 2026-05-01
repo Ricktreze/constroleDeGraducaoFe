@@ -1,0 +1,18 @@
+.bg-body-primary{
+  width: 100%;
+  position: absolute;
+  background-color: #f0efef;
+}
+
+.logo img{
+  width: 10%;
+  
+}
+
+.logo{
+  display: flex;
+  margin-left: 2%;
+  width: 100%;
+  justify-content: space-between;
+}
+

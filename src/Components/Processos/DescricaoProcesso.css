@@ -1,0 +1,24 @@
+.editPosition{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.edit{
+  
+  width: 15%;
+  display: flex;
+  justify-content: space-between !important;
+  padding: auto;
+  margin-bottom: 1%;
+  margin-right: 2%;
+}
+
+.editarBtn{
+  padding: 1px 5px 1px 5px;
+}
+
+.excluirBtn{
+  padding: 1px 5px 1px 5px;
+}

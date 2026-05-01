@@ -1,0 +1,16 @@
+.bg-body-primary{
+  width: 100%;
+  position: absolute;
+  background-color: #f0efef;
+}
+
+.logo img{
+  width: 100%;
+  
+}
+
+.logo{
+  margin-left: 2%;
+  width: 12%;
+}
+

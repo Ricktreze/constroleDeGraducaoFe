@@ -1,0 +1,66 @@
+/* .missionario {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+} */
+
+/* .modalTitulo{
+margin:auto;
+display: flex;
+justify-content: center;
+width: 100%;
+color: white;
+font-size: 35px;
+font-weight: 800;
+} */
+
+/* .modalHeader{
+  background-color: #ff0000
+} */
+
+/* .divCadastros {
+  width: 65%;
+  padding-left: 3%;
+  align-items: center;
+ 
+  
+} */
+
+/* .consulta { 
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  background: red;
+} */
+
+/* .divPesquisa {  
+  position: relative;
+  width: 50%;
+  height: 110vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: blue;
+  align-items: center;
+} */
+
+/* .pesquisa {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  background-color: green;
+} */
+
+/* .mr-sm-2 {
+  width: 100%;
+} */
+
+/* .divFormConsulta{
+  width: 50%;
+  height: 250vh;
+  margin-left: 50%;
+  margin-top: -50%;
+  background-color: orange;
+} */
