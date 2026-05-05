@@ -1,20 +1,21 @@
 .consultaData{
-  display: flex;
+  display: inline;
   flex-direction: row;
   justify-content: center;
   gap: 10%;
   margin-top: 5%;
+  padding: 5%;
 }
 
 .consultarPresenca{
-  display: flex;
+  display: inline;
   flex-direction: row;
   justify-content: center;
   margin-top: 5%;
+  margin-left: 5%;
 }
 
-.consultarBotao{
-  
+.consultarBotao{    
   background-color: red !important;
 }
 
