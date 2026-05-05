@@ -29,7 +29,14 @@ function Consulta({ showModal, setShowModal }) {
 
           <div className='aluno'>
             <div className='divForm'>
-              <FormConsulta className='form' />
+              <FormConsulta className='form' 
+                  executaConsultaPresenca={executaConsultaPresenca}
+                  setExecutaConsultaPresenca={setExecutaConsultaPresenc}
+                  presencaDe={presencaD}
+                  setPresencaDe={setPresencaD}
+                  presencaAte={presencaAte}
+                  setPresencaAte={setPresencaAt}
+              />
             </div>
             <div className="divContPesquisaTable">
               <div className='pesquisa'>
