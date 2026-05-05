@@ -35,7 +35,7 @@ function Consulta({ showModal, setShowModal }) {
                   presencaDe={presencaD}
                   setPresencaDe={setPresencaD}
                   presencaAte={presencaAte}
-                  setPresencaAte={setPresencaAt}
+                  setPresencaAte={setPresencaAt} 
               />
             </div>
             <div className="divContPesquisaTable">
