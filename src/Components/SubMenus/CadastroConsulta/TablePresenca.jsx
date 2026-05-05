@@ -24,9 +24,9 @@ function TablePresenca({executaConsultaPresenca,
 
   useEffect(() => {
     function consultaPresenca() {
-     console.log("consultaPresenca",`https://controle-de-graduacao.onrender.com/api/presenca?presencaDe=${presencaDe}&presencaAte=${presencaAte}&=nomeAluno=${nomeAluno}`)
+     console.log("consultaPresenca",`https://controle-de-graduacao.onrender.com/api/presenca?presencaDe=${presencaDe}&presencaAte=${presencaAte}&nomeAluno=${nomeAluno}`)
       if(presencaDe || nomeAluno){
-          fetch(`https://controle-de-graduacao.onrender.com/api/presenca?presencaDe=${presencaDe}&presencaAte=${presencaAte}&=nomeAluno=${nomeAluno}`)
+          fetch(`https://controle-de-graduacao.onrender.com/api/presenca?presencaDe=${presencaDe}&presencaAte=${presencaAte}&nomeAluno=${nomeAluno}`)
           .then((response) => response.json())
           .then((result) => {
             atualizaPresenca(result);

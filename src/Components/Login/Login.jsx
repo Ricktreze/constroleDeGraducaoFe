@@ -7,7 +7,7 @@ function Login({autorizado, setAltorizado}) {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Impede o recarregamento da página
-    console.log('Dados enviados:', { email, password });
+  
     if (email === "Admin" && password === "123"){
         setAltorizado(true)
     }
