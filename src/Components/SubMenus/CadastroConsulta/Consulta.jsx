@@ -9,13 +9,19 @@ function Consulta({ showModal, setShowModal }) {
 
   const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
   const [fullscreen, setFullscreen] = useState(true);
-  const [nomeAssociado, setNomeAssociado] = useState("");
-  const [associado, setAssociado] = useState(null);
-  const [indiceAssociado, setIndiceAssociado] = useState(0);
-
+  const [nomeAluno, setNomeAluno] = useState("");
+  const [executaConsultaPresenca, setExecutaConsultaPresenca] = useState(0);
+  const [presencaDe, setPresencaDe] = useState('');
+  const [presencaAte, setPresencaAte] = useState('');
 
   const fechaModal = () => {
     setShowModal(false)
+  }
+
+  const fieldChange = (e) => {
+    console.log("nomeAluno",nomeAluno)
+    eval(`set${e.target.name.charAt(0).toUpperCase() + e.target.name.slice(1)}(e.target.value)`)
+    setExecutaConsultaPresenca(executaConsultaPresenca + 1)
   }
 
   return (
@@ -29,13 +35,13 @@ function Consulta({ showModal, setShowModal }) {
 
           <div className='aluno'>
             <div className='divForm'>
-              <FormConsulta className='form' 
-                  executaConsultaPresenca={executaConsultaPresenca}
-                  setExecutaConsultaPresenca={setExecutaConsultaPresenc}
-                  presencaDe={presencaD}
-                  setPresencaDe={setPresencaD}
-                  presencaAte={presencaAte}
-                  setPresencaAte={setPresencaAt} 
+              <FormConsulta className='form'
+                executaConsultaPresenca={executaConsultaPresenca}
+                setExecutaConsultaPresenca={setExecutaConsultaPresenca}
+                presencaDe={presencaDe}
+                setPresencaDe={setPresencaDe}
+                presencaAte={presencaAte}
+                setPresencaAte={setPresencaAte}
               />
             </div>
             <div className="divContPesquisaTable">
@@ -44,13 +50,23 @@ function Consulta({ showModal, setShowModal }) {
                   type="text"
                   placeholder="Pesquisa (código ou nome)"
                   className=" mr-sm-2"
-                  value={nomeAssociado}
-                // onChange={handleSearch}
+                  value={nomeAluno}
+                  onChange={fieldChange}
+                  name="nomeAluno"
                 />
               </div>
 
               <div className='divTable'>
-                <TablePresenca className='table' />
+                <TablePresenca className='table'
+                  executaConsultaPresenca={executaConsultaPresenca}
+                  setExecutaConsultaPresenca={setExecutaConsultaPresenca}
+                  presencaDe={presencaDe}
+                  setPresencaDe={setPresencaDe}
+                  presencaAte={presencaAte}
+                  setPresencaAte={setPresencaAte}
+                  nomeAluno={nomeAluno}
+                  setNomeAluno={setNomeAluno}
+                />
               </div>
 
             </div>

@@ -21,6 +21,7 @@ function Graduacoes({ showModal, setShowModal }) {
 
   const fieldChange = (e) => {
     eval(`set${e.target.name.charAt(0).toUpperCase() + e.target.name.slice(1)}(e.target.value)`)
+    setExecutaConsultaGraduacoes(executaConsultaGraduacoes+1)
   }
 
   return (

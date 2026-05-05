@@ -7,7 +7,9 @@ function TablePresenca({executaConsultaPresenca,
                         presencaDe,
                         setPresencaDe,
                         presencaAte,                      
-                        setPresencaAte
+                        setPresencaAte,
+                        nomeAluno,
+                        setNomeAluno
                       }){
   const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
   const [fullscreen, setFullscreen] = useState(true);
@@ -22,9 +24,9 @@ function TablePresenca({executaConsultaPresenca,
 
   useEffect(() => {
     function consultaPresenca() {
-     console.log("consultaPresenca",executaConsultaPresenca)
-      if(presencaDe){
-          fetch(`https://controle-de-graduacao.onrender.com/api/presenca?presencaDe=${presencaDe}&presencaAte=${presencaAte}`)
+     console.log("consultaPresenca",`https://controle-de-graduacao.onrender.com/api/presenca?presencaDe=${presencaDe}&presencaAte=${presencaAte}=nomeAluno=${nomeAluno}`)
+      if(presencaDe || nomeAluno){
+          fetch(`https://controle-de-graduacao.onrender.com/api/presenca?presencaDe=${presencaDe}&presencaAte=${presencaAte}&=nomeAluno=${nomeAluno}`)
           .then((response) => response.json())
           .then((result) => {
             atualizaPresenca(result);
@@ -41,7 +43,7 @@ function TablePresenca({executaConsultaPresenca,
       }
       consultaPresenca()
 
-  }, [executaConsultaPresenca,presencaDe, presencaAte]);
+  }, [executaConsultaPresenca,presencaDe, presencaAte, nomeAluno]);
 
   function handleShow(breakpoint) {
     setFullscreen(breakpoint);

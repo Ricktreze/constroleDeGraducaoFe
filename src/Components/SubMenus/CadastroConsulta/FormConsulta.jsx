@@ -17,8 +17,7 @@ function FormConsulta({executaConsultaPresenca,
   }
   
   const fieldChange = (e) => {
-    console.log("fieldChange",`set${e.target.name.charAt(0).toUpperCase() + e.target.name.slice(1)}(${e.target.value})`)
-    eval(`set${e.target.name.charAt(0).toUpperCase() + e.target.name.slice(1)}(e.target.value)`)
+      eval(`set${e.target.name.charAt(0).toUpperCase() + e.target.name.slice(1)}(e.target.value)`)
       setExecutaConsultaPresenca(executaConsultaPresenca+1)
   }
   return (
@@ -31,7 +30,7 @@ function FormConsulta({executaConsultaPresenca,
                   <Form.Control
                     type="date"
                     size="sm"
-                    // value={nomealuno}
+                    value={presencaDe}
                     // disabled={isDisabled}
                     // onBlur={vldField}
                     onChange={fieldChange}
@@ -48,7 +47,7 @@ function FormConsulta({executaConsultaPresenca,
                   <Form.Control
                     type="date"
                     size="sm"
-                    // value={nomealuno}
+                    value={presencaAte}
                     // disabled={isDisabled}
                     // onBlur={vldField}
                     onChange={fieldChange}
