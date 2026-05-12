@@ -15,6 +15,7 @@ import Associado from "../SubMenus/CadastroAssociado/Associado";
 import Consulta from "../SubMenus/CadastroConsulta/Consulta";
 import Graduacoes from "../SubMenus/CadastroGraduacoes/Graduacoes";
 import Ajuda from "../SubMenus/Ajuda/Ajuda";
+import Qrcode from "../SubMenus/Qrcode/Qrcode";
 
 function MenuLateral({ nomeMenu, setNomeMenu, autorizado, setAltorizado }) {
   const [show, setShow] = useState(false);
@@ -27,6 +28,7 @@ function MenuLateral({ nomeMenu, setNomeMenu, autorizado, setAltorizado }) {
   const [subAjuda, setSubAjuda] = useState(false);
   const [nomeSubMenu, setNomeSubMenu] = useState("");
   const [showModal, setShowModal] = useState(true);
+  const [qrCode, setQrCode] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -77,7 +79,7 @@ function MenuLateral({ nomeMenu, setNomeMenu, autorizado, setAltorizado }) {
                 title="Cadastro"
                 key="end"
                 drop="centered"
-                variant="danger"                
+                variant="danger"
               >
                 <div className="lista">
                   <Dropdown.Item
@@ -89,59 +91,66 @@ function MenuLateral({ nomeMenu, setNomeMenu, autorizado, setAltorizado }) {
                   >
                     Aluno
                   </Dropdown.Item>
-                 
+
                 </div>
               </NavDropdown>
             </ListGroup.Item>
-              <ListGroup.Item className="listGroup2" action
-                onClick={() => {
+            <ListGroup.Item className="listGroup2" action
+              onClick={() => {
                 auxNomeMenu("PRESENCA");
               }}
+            >
+              <NavDropdown
+                id="dropdown-button-drop-end"
+                title="Consulta"
+                key="end"
+                drop="centered"
+                variant="danger"
               >
-                <NavDropdown
-                  id="dropdown-button-drop-end"
-                  title="Consulta"
-                  key="end"
-                  drop="centered"
-                  variant="danger"                
-                >
-                  <div className="lista">
-                    <Dropdown.Item
-                      className="dropdownAluno"
-                      eventKey="1"
-                      onClick={() => {
-                        chamaComponente("PRESENCA");
-                      }}
-                    >
-                      Presença
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      className="dropdownAluno"
-                      eventKey="1"
-                      onClick={() => {
-                        chamaComponente("GRADUACOES");
-                      }}
-                    >
-                      Graduações
-                    </Dropdown.Item>
-                  
-                  </div>
-                </NavDropdown>
-           </ListGroup.Item>
-            
+                <div className="lista">
+                  <Dropdown.Item
+                    className="dropdownAluno"
+                    eventKey="1"
+                    onClick={() => {
+                      chamaComponente("PRESENCA");
+                    }}
+                  >
+                    Presença
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    className="dropdownAluno"
+                    eventKey="1"
+                    onClick={() => {
+                      chamaComponente("GRADUACOES");
+                    }}
+                  >
+                    Graduações
+                  </Dropdown.Item>
+
+                </div>
+              </NavDropdown>
+            </ListGroup.Item>
+
             <ListGroup.Item className="listGroup7" action
-            onClick={() => {
-                        chamaComponente("AJUDA");
-                      }}
+              onClick={() => {
+                chamaComponente("AJUDA");
+              }}
             >
               Ajuda
             </ListGroup.Item>
-             <ListGroup.Item className="listGroup7" action
-            onClick={() => {
-                        setAltorizado(false);
-                      }}
+            <ListGroup.Item className="listGroup7" action
+              onClick={() => {
+                setAltorizado(false);
+              }}
             >
               Sair
+            </ListGroup.Item>
+            <ListGroup.Item className="listGroup7" action
+              onClick={() => {
+                chamaComponente("QRCODE");
+              }}
+            >
+              QR CODE
             </ListGroup.Item>
           </ListGroup>
         </Offcanvas.Body>
@@ -150,29 +159,32 @@ function MenuLateral({ nomeMenu, setNomeMenu, autorizado, setAltorizado }) {
       {nomeSubMenu === "ASSOCIADO" && (
         <Associado showModal={showModal} setShowModal={setShowModal} />
       )
-    
+
       }
 
       {nomeSubMenu === "PRESENCA" && (
         <Consulta showModal={showModal} setShowModal={setShowModal} />
       )
-    
+
       }
 
       {nomeSubMenu === "GRADUACOES" && (
         <Graduacoes showModal={showModal} setShowModal={setShowModal} />
       )
-    }
+      }
       {nomeSubMenu === "AJUDA" && (
         <Ajuda showModal={showModal} setShowModal={setShowModal} />
       )
-
+      }
+      {nomeSubMenu === "QRCODE" && (
+        <Qrcode showModal={showModal} setShowModal={setShowModal} />
+      )
       }
 
-      
+
     </>
   );
-    
+
 }
 
 export default MenuLateral;
