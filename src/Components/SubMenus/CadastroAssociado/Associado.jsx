@@ -62,9 +62,9 @@ function Associado({ showModal, setShowModal }) {
       let url = ""
     
       if (!handleSearchControl) {
-        url = `https://controle-de-graduacao.onrender.com/api/aluno`
+        url = `https://ricktool.com/api/aluno`
       } else {
-        url = `https://controle-de-graduacao.onrender.com/api/alunoNome?nomealuno=${nomeAssociado}`
+        url = `https://ricktool.com/api/alunoNome?nomealuno=${nomeAssociado}`
       }
       fetch(url)
         .then((response) => response.json())

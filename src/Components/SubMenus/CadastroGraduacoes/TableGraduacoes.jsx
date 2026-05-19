@@ -24,9 +24,9 @@ function TableGraduacoes({graduacoesDe, graduacoesAte,
     function consultaGraduacoes(graduacoesDe, graduacoesAte, nomeAluno) {
       let url = ""
         if(nomeAluno){
-          url = `https://controle-de-graduacao.onrender.com/api/graduacoes?dataDe=${graduacoesDe}&dataAte=${graduacoesAte}&nomeAluno=${nomeAluno}`
+          url = `https://ricktool.com/api/graduacoes?dataDe=${graduacoesDe}&dataAte=${graduacoesAte}&nomeAluno=${nomeAluno}`
         }else{
-          url = `https://controle-de-graduacao.onrender.com/api/graduacoes?dataDe=${graduacoesDe}&dataAte=${graduacoesAte}`
+          url = `https://ricktool.com/api/graduacoes?dataDe=${graduacoesDe}&dataAte=${graduacoesAte}`
         }
         console.log("url",url)
         fetch(url)

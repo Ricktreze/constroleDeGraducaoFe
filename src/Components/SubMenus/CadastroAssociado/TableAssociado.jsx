@@ -18,7 +18,7 @@ function TableAssociado({associado, setAssociado,indiceAssociado,setIndiceAssoci
   useEffect(() => {
     function consultaAssociado() {
      
-        fetch(`https://controle-de-graduacao.onrender.com/api/aluno`)
+        fetch(`https://ricktool.com/api/aluno`)
           .then((response) => response.json())
           .then((result) => {
             atualizaAssociado(result);

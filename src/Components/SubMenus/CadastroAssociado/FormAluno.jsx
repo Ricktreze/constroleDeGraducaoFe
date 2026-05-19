@@ -129,7 +129,7 @@ function FormAluno({
     async function deleteAssociado() {
       try {
         const response = await axios.delete(
-          `https://controle-de-graduacao.onrender.com/api/aluno?id=${id}`
+          `https://ricktool.com/api/aluno?id=${id}`
         );
         atualizaexecutaConsultaAssociado();
       } catch (error) {
@@ -209,7 +209,7 @@ function FormAluno({
     async function putPresenca(objPresenca) {
       console.log("objPresenca", objPresenca)
       try {
-        const response = await axios.put("https://controle-de-graduacao.onrender.com/api/presenca", objPresenca);
+        const response = await axios.put("https://ricktool.com/api/presenca", objPresenca);
         alert("Presença registrada sucesso!")
       } catch (error) {
         alert("Erro de inclusão. Erro: " + error)
@@ -252,10 +252,10 @@ function FormAluno({
     async function postAssociado(objAssociado) {
       try {
         if (putPost === "put") {
-          const response = await axios.put("https://controle-de-graduacao.onrender.com/api/aluno", objAssociado);
+          const response = await axios.put("https://ricktool.com/api/aluno", objAssociado);
           alert("Aluno incluído com sucesso!")
         } else {
-          const response = await axios.post(`https://controle-de-graduacao.onrender.com/api/aluno?_id=${id}`, objAssociado);
+          const response = await axios.post(`https://ricktool.com/api/aluno?_id=${id}`, objAssociado);
           alert("Aluno alterado com sucesso!")
         }
       } catch (error) {
